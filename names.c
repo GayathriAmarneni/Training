@@ -13,7 +13,7 @@ int main()
 		printf("Enter name %d of %d: ", counter + 1, COUNT);
 		scanf("%s", names[counter]);
 	}
-	printf("\n\n");
+	printf("\nNames of students are: \n\n");
 	for(counter =0; counter < COUNT; counter++)
 	{
 		printf("Name of student %d is %s.\n", counter + 1, names[counter]);

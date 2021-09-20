@@ -8,7 +8,7 @@ int main()
 	printf("Enter the marks of %d subjects: \n\n", COUNT);
 	for(counter = 0; counter < COUNT; counter++)
 	{
-		printf("Give marks of subject %d: ", counter + 1);
+		printf("Enter marks of subject %d: ", counter + 1);
 		scanf("%d",&marks[counter]);
 	}
 	printf("\nMarks of %d subjects are: \n\n", COUNT);
