@@ -3,16 +3,16 @@
 #include<stdio.h>
 int main()
 {
-	FILE *fptr;
+	FILE *fptrName;
 	char name[20];
-	fptr = fopen("name.txt", "w");
-	if(fptr == NULL)
+	fptrName = fopen("name.txt", "w");
+	if(fptrName == NULL)
 	{
 		printf("File does not exit.\n");
 		return;
 	}
 	printf("Enter the name: ");
 	scanf("%s", name);
-	fprintf(fptr, "Name = %s", name);
-	fclose(fptr);
+	fprintf(fptrName, "Name = %s", name);
+	fclose(fptrName);
 }

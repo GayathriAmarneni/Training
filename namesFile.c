@@ -1,25 +1,37 @@
 //Read the file containing names and print names on the monitor.
 
 #include<stdio.h>
+#include<stdlib.h>
 int main()
 {
-	FILE *fptr;
-	int counter, arraySize;
-	printf("Enter the number of names in the file: ");
-	scanf("%d", &arraySize);
-	char names[arraySize][20];
-	fptr = fopen("names.txt", "W");
-	if(fptr = NULL)
+	FILE *fpNames;
+	int counter, countOfNames;
+	char fileName[100];
+	printf("Enter file name to open: ");
+	scanf("%s", fileName);
+	printf("Enter the number of names to be saved in the file: ");
+	scanf("%d", &countOfNames);
+	char names[countOfNames][20];
+	printf("\nEnter the %d names to be saved in the file: \n", countOfNames);
+	fpNames = fopen(fileName, "w");
+	for(counter = 0; counter < countOfNames; counter++)
+	{
+		printf("Enter name-%d: ", counter + 1);
+		scanf("%s", names[counter]);
+		fprintf(fpNames, "%s\n", names[counter]);
+	}
+	fclose(fpNames);
+	fpNames = fopen(fileName, "r");
+	if(fpNames == NULL)
 	{
 		printf("File does not exit.\n");
 		return 0;
 	}
-	printf("Enter The names:\n");
-	for(counter = 0; counter < arraySize; counter++)
+	printf("\nThe names in the file %s are: \n", fileName);
+	for(counter = 0; counter < countOfNames; counter++)
 	{
-		printf("Enter the name-%d: ", counter + 1);
-		scanf("%s", names[counter]);
-		fprintf(fptr, "\nName-%d = %s\n", counter + 1, names[counter]);
+		printf("%s\n", names[counter]);
 	}
-	fclose(fptr);
+	fclose(fpNames);
+	return 0;
 }

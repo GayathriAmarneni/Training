@@ -14,7 +14,7 @@ int main()
 	printf("\nMarks of %d subjects are: \n\n", COUNT);
 	for(counter = 0; counter < COUNT; counter++)
 	{
-		printf("Subject-%d marks is = %d \n", counter + 1, marks[counter]);
+		printf("Subject-%d marks is %d.\n", counter + 1, marks[counter]);
 	}
 	return 0;
 }

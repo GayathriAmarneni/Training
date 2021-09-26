@@ -12,7 +12,7 @@ int main()
 	for(counter = 0; counter < count; ++counter)
 	{
 		names[counter] = malloc(20);
-		printf("Enter the names of student-%d: ", counter + 1);
+		printf("Enter the name of student-%d: ", counter + 1);
 		scanf("%s", names[counter]);
  	}
  	printf("\nNames of students: \n");

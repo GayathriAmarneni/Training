@@ -3,18 +3,18 @@
 #include<stdio.h>
 int main()
 {
-	int counter, number;
+	int counter, count;
 	struct details
 	{
 		char name[20];
 		int accountNumber;
 		int balance;
 	};
-	printf("Enter the number of customers: ");
-	scanf("%d", &number);
-	struct details customer[number];
+	printf("Enter the count of customers: ");
+	scanf("%d", &count);
+	struct details customer[count];
 	printf("Enter the details of bank customers:\n\n");
-	for(counter = 0; counter < number; counter++)
+	for(counter = 0; counter < count; counter++)
 	{
 		printf("Enter the name of customer-%d: ", counter + 1);
 		scanf("%s", customer[counter].name);
@@ -25,7 +25,7 @@ int main()
 		printf("\n");
 	}
 	printf("\n\n");
-	for(counter = 0; counter < number; counter++)
+	for(counter = 0; counter < count; counter++)
 	{
 
 		printf("Customer Details:\n");
